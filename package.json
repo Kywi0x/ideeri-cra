@@ -3,18 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "NEXT_DISABLE_TURBOPACK=1 next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prisma:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
+    "clean": "rm -rf .next .turbo",
     "test": "vitest --run",
     "test:watch": "vitest"
   },
   "dependencies": {
     "@notionhq/client": "^5.0.0",
-    "@prisma/client": "^6.15.0",
+    
     "@tanstack/react-query": "^5.87.1",
     "@tanstack/react-table": "^8.21.3",
     "crypto-js": "^4.2.0",
@@ -22,7 +21,7 @@
     "googleapis": "^159.0.0",
     "jsdom": "^26.1.0",
     "next": "15.5.2",
-    "prisma": "^6.15.0",
+    
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "superjson": "^2.2.2",
